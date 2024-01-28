@@ -1,7 +1,10 @@
+* {
+    box-sizing: border-box;
+}
 body {
     background-color: var(--color-lighter);
     background-image: linear-gradient(to left, #9933ff, #99ff33);
-    color: var(--color-darker);
+    color: darkblue;
     display: grid;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
@@ -9,22 +12,23 @@ body {
 section {
     padding: 1.5rem 0;
 }
-#heading {
+h1, h2 {
+    color: darkblue;
+    font-weight: bold;
+    font-family: 'roboto condensed', 'sans-serif';
+}
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+.heading {
     padding: 2px;
     margin: 5px;
-    color: rgb(122, 6, 6);
+    color: navy;
     font-size: 20px;
     font-weight: bold;
 } 
-h1, 
-h2, 
-h3 {
-    font-family: 'Inter', sans-serif;
-    font-size: 30px;
-    font-weight: bold;
-    color: darkblue;
-    padding: 5px;
-}
+
 footer {
     background-color: var(--color-lighter);
     font-size: 1.125rem;
@@ -34,21 +38,20 @@ footer {
     color: darkblue;
     padding: 20px;
 }
-*, *::before, *::after {
-    box-sizing: border-box;
-}
+
 .image {
     display: inline-block;
     border-radius: 50%;
-    width: 70px;
+    width: 75px;
 }
 ul {
     padding: 20px;
 }
 ul li {
     background: #cce5ff;
-    color: darkblue;
     margin: 5px;
+    color: darkblue;
+
 }
 .main-nav {
     list-style-type: none;
@@ -56,7 +59,8 @@ ul li {
     font-weight: bold;
     margin: 0;
     padding: 20px;
-    overflow: hidden;
+    overflow: auto;
+    text-align: justify;
     top: 0;
 }
 .main-nav a {
@@ -65,18 +69,13 @@ ul li {
 }
 .wrapper {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     gap: 10px;
-}
-.headings {
     font-weight: bold;
-    margin: 10px;
-    padding: 5px;
-    color: darkblue;
 }
 form label {
     font-size: 20px;
-    color: darkblue;
+
 }
 input, textarea {
     font-size: 15px;
@@ -88,7 +87,7 @@ form button {
     padding: 5px 5px;
     border: solid;
     color: white;
-    width: 50%;
+    width: 200px;
 }
 .experiences {
     text-align: center;
@@ -107,7 +106,7 @@ form button {
 }
 #message_section ul {
     display: grid;
-    background-color: #cce5ff;
+
     border-style: bold;
 }
 .message-box {
@@ -121,61 +120,32 @@ form button {
     grid-template-rows: 20px 20px;
     text-align: center;
 }
-
-/* For Desktop View */
-@media screen and (min-width: 1024px) {
-    .image {
-        width: 70px;
-    }
-}
- 
-/* For Tablet View */
-@media screen and (min-device-width: 768px) 
-    and (max-device-width: 1024px) {
-    .responsive {
-        width: 400px;
-        height: 400px;
-    }
-    .image {
-        width: 70px;
-    }
-}
- 
-/* For Mobile Portrait View */
-@media screen and (max-device-width: 480px) 
-    and (orientation: portrait) {
-    .responsive {
-        width: 200px;
-        height: 200px;
-    }
-    .image {
-        width: 70px;
-    }
-}
- 
-/* For Mobile Landscape View */
-@media screen and (max-device-width: 640px) 
-    and (orientation: landscape) {
-    .responsive {
-        width: 400px;
-        height: 200px;
-    }
-    .image {
-        width: 70px;
-    }
-}
- 
-/* For Mobile Phones Portrait or Landscape View */
-@media screen
-    and (max-device-width: 640px) {
-    .responsive {
-        width: 400px;
-        height: 200px;
-    }.image {
-        width: 70px;
-    }
+.responsive {
+    display: grid;
 }
 
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: #6082e7;
+        background-image: none;
+    }
+    .main-nav a {
+      float: none;
+      width: 100%;
+    }
+
+    .responsive {
+        width: 100%;
+        gap: 5px;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 10px;
+    }
+}
+  
 
 
 

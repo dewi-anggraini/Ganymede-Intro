@@ -62,9 +62,9 @@ fetch("https://api.github.com/users/dewi-anggraini/repos")
   
         for (let repo of repositories) {
             console.log(repo);
-         const project = document.createElement('li');
-         project.innerText = repo.name;
-         projectList.appendChild(project);
+            const project = document.createElement('li');
+            project.innerText = repo.name;
+            projectList.appendChild(project);
         }
     })
   .catch(function(error) {
